@@ -1,0 +1,269 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 14, 2013 at 11:43 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `aps-prmgma`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `angsuran_siswa`
+--
+
+CREATE TABLE IF NOT EXISTS `angsuran_siswa` (
+  `id_angsuran` int(10) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
+  `id_kelas` int(2) NOT NULL,
+  `angsuran_ke` int(11) NOT NULL,
+  `tanggal` datetime NOT NULL,
+  `biaya` int(11) NOT NULL,
+  `id_periode` int(11) NOT NULL,
+  PRIMARY KEY (`id_angsuran`,`id`,`id_kelas`,`id_periode`),
+  KEY `id` (`id`),
+  KEY `id_kelas` (`id_kelas`),
+  KEY `id_periode` (`id_periode`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=102 ;
+
+--
+-- Dumping data for table `angsuran_siswa`
+--
+
+INSERT INTO `angsuran_siswa` (`id_angsuran`, `id`, `id_kelas`, `angsuran_ke`, `tanggal`, `biaya`, `id_periode`) VALUES
+(10, 5, 10, 1, '2013-05-26 18:41:49', 500000, 11),
+(11, 4, 11, 1, '2013-05-26 18:44:47', 400000, 11),
+(13, 8, 4, 1, '2013-05-26 19:26:31', 1300000, 11),
+(16, 5, 10, 2, '2013-08-14 00:00:00', 500000, 11),
+(17, 5, 10, 3, '2013-07-12 00:00:00', 100000, 11),
+(18, 9, 3, 1, '2013-05-27 08:21:10', 300000, 11),
+(20, 9, 3, 2, '2013-05-27 09:32:07', 1300000, 11),
+(21, 5, 10, 4, '2013-05-27 10:02:21', 600000, 11),
+(22, 11, 4, 1, '2013-05-27 10:03:29', 300000, 11),
+(23, 12, 3, 1, '2013-05-27 10:08:08', 200000, 11),
+(24, 13, 5, 1, '2013-01-01 18:39:36', 200000, 11),
+(25, 13, 5, 1, '2013-01-01 18:39:57', 500000, 11),
+(26, 15, 6, 1, '2013-01-01 18:42:00', 600000, 11),
+(27, 16, 6, 1, '2013-01-01 18:43:32', 200000, 11),
+(28, 17, 7, 1, '2013-01-01 18:45:40', 300000, 11),
+(29, 18, 8, 1, '2013-01-01 18:47:19', 300000, 11),
+(30, 19, 8, 1, '2013-02-01 18:50:05', 1300000, 11),
+(31, 20, 9, 1, '2013-02-01 18:51:40', 300000, 11),
+(32, 10, 3, 1, '2013-02-01 18:54:13', 500000, 11),
+(33, 12, 3, 1, '2013-02-01 18:54:27', 400000, 11),
+(34, 11, 4, 1, '2013-02-01 18:54:48', 500000, 11),
+(35, 22, 12, 1, '2013-02-01 18:57:27', 400000, 11),
+(36, 21, 12, 1, '2013-02-01 18:57:55', 400000, 11),
+(37, 12, 3, 3, '2013-03-01 18:59:08', 300000, 11),
+(38, 10, 3, 2, '2013-03-01 18:59:29', 600000, 11),
+(39, 11, 4, 3, '2013-03-01 19:00:00', 400000, 11),
+(40, 14, 5, 1, '2013-03-01 19:00:18', 500000, 11),
+(41, 15, 6, 1, '2013-03-01 19:00:36', 300000, 11),
+(42, 16, 6, 2, '2013-03-01 19:00:57', 400000, 11),
+(43, 17, 7, 2, '2013-03-01 19:01:18', 300000, 11),
+(44, 12, 3, 4, '2013-04-01 19:02:30', 500000, 11),
+(45, 10, 3, 3, '2013-04-01 19:02:44', 300000, 11),
+(46, 23, 10, 1, '2013-04-01 19:03:28', 600000, 11),
+(47, 18, 8, 2, '2013-04-01 19:05:31', 600000, 11),
+(48, 4, 11, 2, '2013-04-01 19:05:50', 600000, 11),
+(49, 21, 12, 2, '2013-04-01 19:06:10', 400000, 11),
+(50, 22, 12, 2, '2013-04-01 19:06:26', 500000, 11),
+(51, 20, 9, 2, '2013-04-01 19:07:00', 500000, 11),
+(52, 10, 3, 4, '2013-06-01 19:08:03', 300000, 11),
+(53, 11, 4, 4, '2013-06-01 19:08:44', 500000, 11),
+(54, 15, 6, 3, '2013-06-01 19:09:03', 400000, 11),
+(55, 16, 6, 3, '2013-06-01 19:09:17', 700000, 11),
+(56, 17, 7, 3, '2013-06-01 19:09:35', 700000, 11),
+(57, 18, 8, 3, '2013-06-01 19:09:53', 400000, 11),
+(58, 20, 9, 3, '2013-06-01 19:10:24', 500000, 11),
+(59, 23, 10, 2, '2013-06-01 19:11:01', 1100000, 11),
+(60, 4, 11, 1, '2013-06-01 19:11:17', 700000, 11),
+(61, 21, 12, 3, '2013-06-01 19:11:35', 700000, 11),
+(62, 22, 12, 3, '2013-06-01 19:11:54', 800000, 11),
+(63, 13, 5, 3, '2013-06-01 19:12:48', 500000, 11),
+(64, 14, 5, 2, '2013-06-01 19:13:03', 800000, 11),
+(65, 30, 6, 1, '2013-07-01 19:19:06', 500000, 11),
+(66, 29, 5, 1, '2013-07-01 19:19:21', 400000, 11),
+(67, 28, 5, 1, '2013-07-01 19:19:34', 400000, 11),
+(68, 27, 4, 1, '2013-07-01 19:19:50', 300000, 11),
+(69, 24, 3, 1, '2013-07-01 19:20:04', 400000, 11),
+(70, 25, 3, 1, '2013-07-01 19:20:14', 400000, 11),
+(71, 26, 3, 1, '2013-07-01 19:20:24', 500000, 11),
+(72, 26, 3, 2, '2013-08-01 19:20:45', 300000, 11),
+(73, 25, 3, 2, '2013-08-01 19:20:59', 500000, 11),
+(74, 24, 3, 2, '2013-08-01 19:21:13', 500000, 11),
+(75, 27, 4, 2, '2013-08-01 19:21:29', 500000, 11),
+(76, 28, 5, 2, '2013-08-01 19:21:45', 600000, 11),
+(77, 29, 5, 2, '2013-08-01 19:22:04', 500000, 11),
+(78, 29, 5, 3, '2013-09-01 19:22:24', 500000, 11),
+(79, 30, 6, 2, '2013-09-01 19:22:42', 500000, 11),
+(80, 24, 3, 3, '2013-09-01 19:23:02', 400000, 11),
+(81, 25, 3, 3, '2013-09-01 19:23:14', 400000, 11),
+(82, 26, 3, 3, '2013-09-01 19:23:26', 300000, 11),
+(83, 27, 4, 3, '2013-09-01 19:23:40', 300000, 11),
+(84, 27, 4, 4, '2013-10-01 19:23:58', 200000, 11),
+(85, 24, 3, 4, '2013-10-01 19:24:22', 400000, 11),
+(86, 25, 3, 4, '2013-10-01 19:24:39', 400000, 11),
+(87, 26, 3, 4, '2013-10-01 19:24:57', 200000, 11),
+(88, 29, 5, 4, '2013-10-01 19:25:33', 300000, 11),
+(89, 28, 5, 3, '2013-10-01 19:25:57', 400000, 11),
+(90, 34, 8, 1, '2013-11-01 19:28:49', 500000, 11),
+(91, 31, 7, 1, '2013-11-01 19:29:28', 500000, 11),
+(92, 32, 7, 1, '2013-11-01 19:29:39', 500000, 11),
+(93, 33, 7, 1, '2013-11-01 19:29:50', 500000, 11),
+(94, 28, 5, 4, '2013-11-01 19:30:14', 300000, 11),
+(95, 30, 6, 3, '2013-11-01 19:30:42', 400000, 11),
+(96, 34, 8, 2, '2013-11-01 19:31:54', 500000, 11),
+(97, 34, 8, 3, '2013-12-01 19:32:22', 700000, 11),
+(98, 31, 7, 2, '2013-12-01 19:32:37', 800000, 11),
+(99, 32, 7, 1, '2013-12-01 19:32:47', 800000, 11),
+(100, 33, 7, 2, '2013-12-01 19:32:59', 800000, 11),
+(101, 30, 6, 4, '2013-12-01 19:33:19', 300000, 11);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `biodata_siswa`
+--
+
+CREATE TABLE IF NOT EXISTS `biodata_siswa` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_kelas` int(2) NOT NULL,
+  `id_periode` int(11) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `asal_sekolah` varchar(30) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `tanggal_lahir` varchar(25) NOT NULL,
+  `tempat_lahir` varchar(30) NOT NULL,
+  `no_hp` varchar(15) NOT NULL,
+  `biaya_daftar` int(11) NOT NULL,
+  `biaya_bimbingan` int(11) NOT NULL,
+  `biaya_total` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`id_kelas`,`id_periode`),
+  KEY `id_periode` (`id_periode`),
+  KEY `id_kelas` (`id_kelas`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
+
+--
+-- Dumping data for table `biodata_siswa`
+--
+
+INSERT INTO `biodata_siswa` (`id`, `id_kelas`, `id_periode`, `nama`, `asal_sekolah`, `alamat`, `tanggal_lahir`, `tempat_lahir`, `no_hp`, `biaya_daftar`, `biaya_bimbingan`, `biaya_total`) VALUES
+(4, 11, 11, 'KEMAL WIBISONO', 'SMAN 2 BEKASI', 'JL. MERAH,BEKASI', '25 FEBRUARI 1993', 'JAKARTA', '081235083671', 200000, 1500000, 1700000),
+(5, 10, 11, 'AKBAR HAKIM PRABOWO', 'SMAN 3 SIDOARJO', 'PERUM. TPI GII-12A,SIDOARJO ', '29 MEI 1993', 'PATI', '085731479204', 200000, 1500000, 1700000),
+(6, 3, 12, 'MIKKO SAIFUDIN', 'SDN 1 CITARASA BEKASI ', 'PERUM. GEGE NO.2', '25 FEBRUARI 2003', 'BEKASI', '081235083671', 200000, 1000000, 1200000),
+(8, 4, 11, 'JOSE MOURINHO', 'SDN 1 PORTUGAL', 'JL. BRAGA NO.11', '28 MEI 2002', 'BRAGA', '085731479204', 200000, 1100000, 1300000),
+(9, 3, 11, 'WIDYA WS', 'SDN 1 KEDIRI', 'JL. CIPTO NO 22 ,KEDIRI', '8 MARET 2003', 'KEDIRI', '085731479204', 100000, 1500000, 1600000),
+(10, 3, 11, 'MAULIDA', 'SDN 1 CITARASA BEKASI ', 'JL. MERAH,BEKASI', '22 AGUSTUS 2003', 'BEKASI', '085731479204', 200000, 1500000, 1700000),
+(11, 4, 11, 'ANIS MAU', 'SDN 1 PORTUGAL', 'JL. MERAH,BEKASI', '25 FEBRUARI 2002', 'JAKARTA', '085731479204', 200000, 1500000, 1700000),
+(12, 3, 11, 'FIKAR LALALA', 'SDN 1 CITARASA BEKASI ', 'JL. MERAH,BEKASI', '29 MEI 1993', 'PATI', '085731479204', 300000, 1100000, 1400000),
+(13, 5, 11, 'GEAFIATA AMALIA', 'SDN 1 CITARASA BEKASI ', 'JL. MERAH,BEKASI', '25 FEBRUARI 1993', 'JAKARTA', '08675554445', 200000, 1000000, 1200000),
+(14, 5, 11, 'WIBIANTO', 'SDN 1 CITARASA BEKASI ', 'JL. MERAH,BEKASI', '29 MEI 2004', 'PATI', '085731479204', 200000, 1100000, 1300000),
+(15, 6, 11, 'ROLANDO', 'SDN 1 PORTUGAL', 'JL. CIPTO NO 22 ,KEDIRI', '25 FEBRUARI 2004', 'PROBOLINGGO', '08675554445', 200000, 1100000, 1300000),
+(16, 6, 11, 'JOHN ENGLISH', 'SDN 1 ROSOROSO', 'JL. BRAGA NO.11', '25 FEBRUARI 2004', 'MALANG', '085731479204', 200000, 1100000, 1300000),
+(17, 7, 11, 'ERICKA YEAN', 'SMPN 1 PORTUGAL', 'JL. CIPTO NO 22 ,KEDIRI', '22 AGUSTUS 2000', 'JAKARTA', '085731479204', 200000, 1100000, 1300000),
+(18, 8, 11, 'CRISTIANO RONALDO', 'SMPN 1 PORTUGAL', 'JL. BRAGA NO.11', '25 FEBRUARI 1999', 'JAKARTA', '085731479204', 200000, 1100000, 1300000),
+(19, 8, 11, 'BOATENG', 'SDN 1 MILAN', 'JL. CIPTO NO 22 ,KEDIRI', '25 FEBRUARI 1999', 'JAKARTA', '08675554445', 200000, 1100000, 1300000),
+(20, 9, 11, 'CHICARITO', 'SMPN 3 SIDOARJO', 'PERUM. TPI GII-12A,SIDOARJO ', '25 FEBRUARI 1998', 'PATI', '081235083671', 200000, 1100000, 1300000),
+(21, 12, 11, 'FERDAUS', 'SMAN 1 KEDIRI', 'JL. BRAGA NO.11', '25 FEBRUARI 1993', 'PATI', '08675554445', 200000, 1300000, 1500000),
+(22, 12, 11, 'JACK FIRMAN', 'SMAN 2 BEKASI', 'JL. CIPTO NO 22 ,KEDIRI', '25 FEBRUARI 1993', 'JAKARTA', '085731479204', 200000, 1500000, 1700000),
+(23, 10, 11, 'HANIAN', 'SMAN 2 BEKASI', 'JL. MERAH,BEKASI', '25 FEBRUARI 1993', 'JAKARTA', '085731479204', 200000, 1500000, 1700000),
+(24, 3, 11, 'RONI', 'SDN 1 CITARASA BEKASI ', 'JL. CIPTO NO 22 ,KEDIRI', '25 FEBRUARI 2004', 'JAKARTA', '08675554445', 200000, 1500000, 1700000),
+(25, 3, 11, 'RINA', 'SDN 1 PORTUGAL', 'JL. BRAGA NO.11', '25 FEBRUARI 2004', 'JAKARTA', '085731479204', 200000, 1500000, 1700000),
+(26, 3, 11, 'RUSDIAWAN', 'SDN 1 PORTUGAL', 'JL. MERAH,BEKASI', '29 MEI 2004', 'MALANG', '085731479204', 200000, 1100000, 1300000),
+(27, 4, 11, 'AHMAD DIN', 'SDN 1 PORTUGAL', 'PERUM. TPI GII-12A,SIDOARJO ', '29 MEI 2004', 'KEDIRI', '085731479204', 200000, 1100000, 1300000),
+(28, 5, 11, 'ZULKIFLI', 'SDN 1 CITARASA BEKASI ', 'JL. MERAH,BEKASI', '29 MEI 2004', 'JAKARTA', '085731479204', 200000, 1500000, 1700000),
+(29, 5, 11, 'JIN', 'SDN 1 PORTUGAL', 'JL. CIPTO NO 22 ,KEDIRI', '27 AGUSTUS 2003', 'JAKARTA', '085731479204', 200000, 1500000, 1700000),
+(30, 6, 11, 'ZIN', 'SDN 1 PORTUGAL', 'JL. CIPTO NO 22 ,KEDIRI', '25 FEBRUARI 2004', 'JAKARTA', '085731479204', 200000, 1500000, 1700000),
+(31, 7, 11, 'DESI', 'SMPN 3 SIDOARJO', 'JL. CIPTO NO 22 ,KEDIRI', '25 FEBRUARI 1993', 'JAKARTA', '085731479204', 200000, 1100000, 1300000),
+(32, 7, 11, 'DEA', 'SDN 1 PORTUGAL', 'JL. BRAGA NO.11', '25 FEBRUARI 1993', 'JAKARTA', '08675554445', 200000, 1100000, 1300000),
+(33, 7, 11, 'DIDIN', 'SDN 1 CITARASA BEKASI ', 'PERUM. TPI GII-12A,SIDOARJO ', '25 FEBRUARI 1993', 'JAKARTA', '08675554445', 200000, 1100000, 1300000),
+(34, 8, 11, 'ISIS', 'SDN 1 PORTUGAL', 'JL. CIPTO NO 22 ,KEDIRI', '25 FEBRUARI 1993', 'JAKARTA', '085731479204', 200000, 1500000, 1700000);
+
+--
+-- Triggers `biodata_siswa`
+--
+DROP TRIGGER IF EXISTS `upd_total`;
+DELIMITER //
+CREATE TRIGGER `upd_total` BEFORE UPDATE ON `biodata_siswa`
+ FOR EACH ROW set NEW.biaya_total=NEW.biaya_bimbingan+NEW.biaya_daftar
+//
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kelas`
+--
+
+CREATE TABLE IF NOT EXISTS `kelas` (
+  `id_kelas` int(2) NOT NULL,
+  `k_content` varchar(30) NOT NULL,
+  PRIMARY KEY (`id_kelas`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kelas`
+--
+
+INSERT INTO `kelas` (`id_kelas`, `k_content`) VALUES
+(3, '3 SD'),
+(4, '4 SD'),
+(5, '5 SD'),
+(6, '6 SD'),
+(7, '1 SMP'),
+(8, '2 SMP'),
+(9, '3 SMP'),
+(10, '1 SMA'),
+(11, '2 SMA'),
+(12, '3 SMA');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `periode`
+--
+
+CREATE TABLE IF NOT EXISTS `periode` (
+  `id_periode` int(11) NOT NULL AUTO_INCREMENT,
+  `p_content` varchar(30) NOT NULL,
+  PRIMARY KEY (`id_periode`),
+  UNIQUE KEY `p_content` (`p_content`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `periode`
+--
+
+INSERT INTO `periode` (`id_periode`, `p_content`) VALUES
+(11, '2013/2014'),
+(12, '2014/2015');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `biodata_siswa`
+--
+ALTER TABLE `biodata_siswa`
+  ADD CONSTRAINT `biodata_siswa_ibfk_1` FOREIGN KEY (`id_periode`) REFERENCES `periode` (`id_periode`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `biodata_siswa_ibfk_2` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

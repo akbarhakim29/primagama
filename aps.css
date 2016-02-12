@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+#kosong{
+	background-color:transparent;
+	height:50px;
+	}
+#login,#kosonglogin{
+	background-color:#399;
+	height:150px;
+	margin-left:5px;
+	}
+#header{
+	background-color:#60F;
+	height:100px;
+	}
+#username{
+	background-color:#639;
+	height:100px;
+	color:#FFF;
+	text-align:center;
+	vertical-align:bottom;
+	}
+#menu{
+	background-color:#666;
+	height:50px;
+	}
+#menu1,#menu2,#menu3{
+	background-color:#333;
+	border:thick;
+	height:50px;
+	margin-left:5px;
+	color:#FFF
+	}
+#kelas2{
+	background-color:transparent;
+	height:50px;
+	margin:0px;
+	}
+#kelas3{
+	background-color:transparent;
+	height:250px;
+	margin:0px;
+	}
+#kelas{
+	background-color:#0CC;
+	height:50px;
+	font-size:16px;
+	text-align:center;
+	vertical-align:bottom;
+	margin:0px;
+	font-size:14px;
+	;
+	}
+#footer{
+	background-color:#0CC;
+	height:50px;
+	font-size:16px;
+	text-align:center;
+	margin-top:15px;
+	}
